@@ -12,7 +12,12 @@ $(OUT): $(SRC)
 	$(CXX) $(CXXFLAGS) $(SRC) $(LDFLAGS) -o $(OUT)
 	cp lib/SDL2.dll build/
 
+test:
+	mkdir -p build
+	$(CXX) $(CXXFLAGS) tests/test_phase2.cpp src/chip8.cpp -o build/test_phase2
+	./build/test_phase2
+
 clean:
-	rm -rf build/chip8.exe
-	
+	rm -rf build/
+
 # cli: g++ src/main.cpp src/chip8.cpp -Iinclude -Llib -lSDL2 -o build/chip8
