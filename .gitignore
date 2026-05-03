@@ -1,0 +1,13 @@
+build/
+*.exe
+
+roms/*.ch8
+roms/*
+!roms/.gitkeep
+
+.vscode/
+.vs/
+*.suo
+
+.DS_Store
+Thumbs.db
